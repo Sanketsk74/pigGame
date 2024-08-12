@@ -1,6 +1,5 @@
 'use strict';
 
-
 // selecting elements
 
 const player0El = document.querySelector('.player--0');
@@ -43,8 +42,10 @@ const init = function(){
 
     score0El.textContent = 0;
     score1El.textContent = 0;
+
     current0El.textContent = 0;
-    current0El.textContent = 0;
+    current1El.textContent = 0;
+    
     player0El.classList.remove('player--winner');
     player1El.classList.remove('player--winner');
     
@@ -87,10 +88,9 @@ btnRoll.addEventListener('click',function(){
 
 
     //2. Display dice
-
-    diceEl.src = `dice-${dice}.png`;
     diceEl.classList.remove('hidden');
-    console.log(dice);
+    diceEl.src = `dice-${dice}.png`;
+    // console.log(dice);
 
     //3. Check for rolled dice number is 1 or not : if true, then switch to next player
     if(dice !== 1){
